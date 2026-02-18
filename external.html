@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Product Grid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#f2f2f2;
+}
+h1{
+text-align:center;
+padding:20px;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:20px;
+}
+.card{
+background:white;
+padding:15px;
+text-align:center;
+border-radius:5px;
+}
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+.card h3{
+margin:10px 0;
+}
+.card p{
+color:green;
+font-weight:bold;
+}
+button{
+padding:8px 15px;
+background:black;
+color:white;
+border:none;
+cursor:pointer;
+}
+@media(max-width:992px){
+.grid{
+grid-template-columns:repeat(3,1fr);
+}
+}
+@media(max-width:768px){
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+@media(max-width:480px){
+.grid{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+<body>
+<h1>Our Products</h1>
+<div class="grid">
+<div class="card">
+<img src="https://via.placeholder.com/300" alt="">
+<h3>Product 1</h3>
+<p>₹999</p>
+<button>Add to Cart</button>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/300" alt="">
+<h3>Product 2</h3>
+<p>₹1299</p>
+<button>Add to Cart</button>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/300" alt="">
+<h3>Product 3</h3>
+<p>₹799</p>
+<button>Add to Cart</button>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/300" alt="">
+<h3>Product 4</h3>
+<p>₹1499</p>
+<button>Add to Cart</button>
+</div>
+</div>
+</body>
+</html>
